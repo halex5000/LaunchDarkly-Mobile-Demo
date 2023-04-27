@@ -11,7 +11,7 @@ import SwiftUI
 struct LaunchDarkly_Mobile_DemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            InventoryView()
         }
     }
 }

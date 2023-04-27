@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		2870FC4229FAB84E005672F0 /* LaunchDarkly_Mobile_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC4129FAB84E005672F0 /* LaunchDarkly_Mobile_DemoApp.swift */; };
-		2870FC4429FAB84E005672F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC4329FAB84E005672F0 /* ContentView.swift */; };
+		2870FC4429FAB84E005672F0 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC4329FAB84E005672F0 /* InventoryView.swift */; };
 		2870FC4629FAB850005672F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2870FC4529FAB850005672F0 /* Assets.xcassets */; };
 		2870FC4929FAB850005672F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2870FC4829FAB850005672F0 /* Preview Assets.xcassets */; };
+		2870FC5429FABE42005672F0 /* LaunchDarkly in Frameworks */ = {isa = PBXBuildFile; productRef = 2870FC5329FABE42005672F0 /* LaunchDarkly */; };
+		2870FC5F29FACA4D005672F0 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 2870FC5E29FACA4D005672F0 /* Stripe */; };
+		2870FC6729FAEE4E005672F0 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC6629FAEE4E005672F0 /* ProductView.swift */; };
+		2870FC6929FAF052005672F0 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC6829FAF052005672F0 /* Inventory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2870FC3E29FAB84E005672F0 /* LaunchDarkly Mobile Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LaunchDarkly Mobile Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2870FC4129FAB84E005672F0 /* LaunchDarkly_Mobile_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDarkly_Mobile_DemoApp.swift; sourceTree = "<group>"; };
-		2870FC4329FAB84E005672F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2870FC4329FAB84E005672F0 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
 		2870FC4529FAB850005672F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2870FC4829FAB850005672F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2870FC6629FAEE4E005672F0 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		2870FC6829FAF052005672F0 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2870FC5429FABE42005672F0 /* LaunchDarkly in Frameworks */,
+				2870FC5F29FACA4D005672F0 /* Stripe in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +59,8 @@
 		2870FC4029FAB84E005672F0 /* LaunchDarkly Mobile Demo */ = {
 			isa = PBXGroup;
 			children = (
+				2870FC4F29FABCDC005672F0 /* Models */,
 				2870FC4129FAB84E005672F0 /* LaunchDarkly_Mobile_DemoApp.swift */,
-				2870FC4329FAB84E005672F0 /* ContentView.swift */,
 				2870FC4529FAB850005672F0 /* Assets.xcassets */,
 				2870FC4729FAB850005672F0 /* Preview Content */,
 			);
@@ -62,9 +70,19 @@
 		2870FC4729FAB850005672F0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				2870FC4329FAB84E005672F0 /* InventoryView.swift */,
+				2870FC6629FAEE4E005672F0 /* ProductView.swift */,
 				2870FC4829FAB850005672F0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2870FC4F29FABCDC005672F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2870FC6829FAF052005672F0 /* Inventory.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +101,10 @@
 			dependencies = (
 			);
 			name = "LaunchDarkly Mobile Demo";
+			packageProductDependencies = (
+				2870FC5329FABE42005672F0 /* LaunchDarkly */,
+				2870FC5E29FACA4D005672F0 /* Stripe */,
+			);
 			productName = "LaunchDarkly Mobile Demo";
 			productReference = 2870FC3E29FAB84E005672F0 /* LaunchDarkly Mobile Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,10 @@
 				Base,
 			);
 			mainGroup = 2870FC3529FAB84E005672F0;
+			packageReferences = (
+				2870FC5229FABE42005672F0 /* XCRemoteSwiftPackageReference "ios-client-sdk" */,
+				2870FC5D29FACA4D005672F0 /* XCRemoteSwiftPackageReference "stripe-ios" */,
+			);
 			productRefGroup = 2870FC3F29FAB84E005672F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2870FC4429FAB84E005672F0 /* ContentView.swift in Sources */,
+				2870FC6929FAF052005672F0 /* Inventory.swift in Sources */,
+				2870FC4429FAB84E005672F0 /* InventoryView.swift in Sources */,
+				2870FC6729FAEE4E005672F0 /* ProductView.swift in Sources */,
 				2870FC4229FAB84E005672F0 /* LaunchDarkly_Mobile_DemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +365,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2870FC5229FABE42005672F0 /* XCRemoteSwiftPackageReference "ios-client-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/launchdarkly/ios-client-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		2870FC5D29FACA4D005672F0 /* XCRemoteSwiftPackageReference "stripe-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 23.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2870FC5329FABE42005672F0 /* LaunchDarkly */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2870FC5229FABE42005672F0 /* XCRemoteSwiftPackageReference "ios-client-sdk" */;
+			productName = LaunchDarkly;
+		};
+		2870FC5E29FACA4D005672F0 /* Stripe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2870FC5D29FACA4D005672F0 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = Stripe;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2870FC3629FAB84E005672F0 /* Project object */;
 }

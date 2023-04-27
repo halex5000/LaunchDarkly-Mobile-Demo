@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "ios-client-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/launchdarkly/ios-client-sdk.git",
+      "state" : {
+        "revision" : "4274708ead155753818ba03f7e2dd3bba677dd35",
+        "version" : "8.0.1"
+      }
+    },
+    {
+      "identity" : "stripe-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stripe/stripe-ios",
+      "state" : {
+        "revision" : "ceed06010bd599bec7970b8ed730421a70d6aad0",
+        "version" : "23.7.0"
+      }
+    },
+    {
+      "identity" : "swift-eventsource",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/LaunchDarkly/swift-eventsource.git",
+      "state" : {
+        "revision" : "aa03131eb30bbc35513153609ed65209853603a7",
+        "version" : "3.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
