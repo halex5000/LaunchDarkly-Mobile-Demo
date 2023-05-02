@@ -7,24 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2837CD592A0169A800C593D9 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2837CD582A0169A800C593D9 /* data.json */; };
+		284880E32A00646D005E579F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284880E22A00646D005E579F /* LoginView.swift */; };
 		2870FC4229FAB84E005672F0 /* LaunchDarkly_Mobile_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC4129FAB84E005672F0 /* LaunchDarkly_Mobile_DemoApp.swift */; };
 		2870FC4429FAB84E005672F0 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC4329FAB84E005672F0 /* InventoryView.swift */; };
 		2870FC4629FAB850005672F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2870FC4529FAB850005672F0 /* Assets.xcassets */; };
 		2870FC4929FAB850005672F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2870FC4829FAB850005672F0 /* Preview Assets.xcassets */; };
 		2870FC5429FABE42005672F0 /* LaunchDarkly in Frameworks */ = {isa = PBXBuildFile; productRef = 2870FC5329FABE42005672F0 /* LaunchDarkly */; };
-		2870FC5F29FACA4D005672F0 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 2870FC5E29FACA4D005672F0 /* Stripe */; };
 		2870FC6729FAEE4E005672F0 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC6629FAEE4E005672F0 /* ProductView.swift */; };
 		2870FC6929FAF052005672F0 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC6829FAF052005672F0 /* Inventory.swift */; };
+		2870FC7029FC16A5005672F0 /* SMeltery - Audimat 3000 Regulier.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2870FC6F29FC16A5005672F0 /* SMeltery - Audimat 3000 Regulier.otf */; };
+		2870FC7529FC44AB005672F0 /* LaunchDarkly-Mobile-Demo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2870FC7429FC44AB005672F0 /* LaunchDarkly-Mobile-Demo-Info.plist */; };
+		2870FC7729FC4581005672F0 /* Söhne-Buch.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2870FC7629FC4581005672F0 /* Söhne-Buch.otf */; };
+		2870FC7B29FC89DE005672F0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2870FC7A29FC89DE005672F0 /* Launch Screen.storyboard */; };
+		2870FC7D2A00188B005672F0 /* SwipeableProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC7C2A00188B005672F0 /* SwipeableProductList.swift */; };
+		2870FC7F2A0018EE005672F0 /* AppHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC7E2A0018EE005672F0 /* AppHeaderView.swift */; };
+		2870FC812A0019A3005672F0 /* CommonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC802A0019A3005672F0 /* CommonStyles.swift */; };
+		2870FC832A0019F1005672F0 /* FeatureFlagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC822A0019F1005672F0 /* FeatureFlagViewModel.swift */; };
+		2870FC852A001A64005672F0 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC842A001A64005672F0 /* ProductViewModel.swift */; };
+		2870FC872A001B97005672F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC862A001B97005672F0 /* SceneDelegate.swift */; };
+		2870FC892A001D6F005672F0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC882A001D6F005672F0 /* RootView.swift */; };
+		2870FC8B2A002086005672F0 /* OldProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2870FC8A2A002086005672F0 /* OldProductListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2837CD582A0169A800C593D9 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		284880E22A00646D005E579F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2870FC3E29FAB84E005672F0 /* LaunchDarkly Mobile Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LaunchDarkly Mobile Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2870FC4129FAB84E005672F0 /* LaunchDarkly_Mobile_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDarkly_Mobile_DemoApp.swift; sourceTree = "<group>"; };
-		2870FC4329FAB84E005672F0 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
+		2870FC4329FAB84E005672F0 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InventoryView.swift; path = "LaunchDarkly Mobile Demo/InventoryView.swift"; sourceTree = SOURCE_ROOT; };
 		2870FC4529FAB850005672F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2870FC4829FAB850005672F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2870FC6629FAEE4E005672F0 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		2870FC6629FAEE4E005672F0 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductView.swift; path = "LaunchDarkly Mobile Demo/ProductView.swift"; sourceTree = SOURCE_ROOT; };
 		2870FC6829FAF052005672F0 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		2870FC6F29FC16A5005672F0 /* SMeltery - Audimat 3000 Regulier.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SMeltery - Audimat 3000 Regulier.otf"; sourceTree = "<group>"; };
+		2870FC7429FC44AB005672F0 /* LaunchDarkly-Mobile-Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LaunchDarkly-Mobile-Demo-Info.plist"; sourceTree = "<group>"; };
+		2870FC7629FC4581005672F0 /* Söhne-Buch.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Söhne-Buch.otf"; sourceTree = "<group>"; };
+		2870FC7A29FC89DE005672F0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		2870FC7C2A00188B005672F0 /* SwipeableProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableProductList.swift; sourceTree = "<group>"; };
+		2870FC7E2A0018EE005672F0 /* AppHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHeaderView.swift; sourceTree = "<group>"; };
+		2870FC802A0019A3005672F0 /* CommonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonStyles.swift; sourceTree = "<group>"; };
+		2870FC822A0019F1005672F0 /* FeatureFlagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlagViewModel.swift; sourceTree = "<group>"; };
+		2870FC842A001A64005672F0 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		2870FC862A001B97005672F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2870FC882A001D6F005672F0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		2870FC8A2A002086005672F0 /* OldProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldProductListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +60,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2870FC5429FABE42005672F0 /* LaunchDarkly in Frameworks */,
-				2870FC5F29FACA4D005672F0 /* Stripe in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +69,7 @@
 		2870FC3529FAB84E005672F0 = {
 			isa = PBXGroup;
 			children = (
+				2870FC7429FC44AB005672F0 /* LaunchDarkly-Mobile-Demo-Info.plist */,
 				2870FC4029FAB84E005672F0 /* LaunchDarkly Mobile Demo */,
 				2870FC3F29FAB84E005672F0 /* Products */,
 			);
@@ -59,10 +86,22 @@
 		2870FC4029FAB84E005672F0 /* LaunchDarkly Mobile Demo */ = {
 			isa = PBXGroup;
 			children = (
+				2870FC4329FAB84E005672F0 /* InventoryView.swift */,
+				2870FC7C2A00188B005672F0 /* SwipeableProductList.swift */,
+				2870FC7E2A0018EE005672F0 /* AppHeaderView.swift */,
+				2870FC802A0019A3005672F0 /* CommonStyles.swift */,
+				2870FC862A001B97005672F0 /* SceneDelegate.swift */,
+				2870FC882A001D6F005672F0 /* RootView.swift */,
+				2870FC8A2A002086005672F0 /* OldProductListView.swift */,
+				284880E22A00646D005E579F /* LoginView.swift */,
+				2870FC6629FAEE4E005672F0 /* ProductView.swift */,
 				2870FC4F29FABCDC005672F0 /* Models */,
+				2870FC6A29FC1548005672F0 /* Fonts */,
 				2870FC4129FAB84E005672F0 /* LaunchDarkly_Mobile_DemoApp.swift */,
 				2870FC4529FAB850005672F0 /* Assets.xcassets */,
+				2870FC7A29FC89DE005672F0 /* Launch Screen.storyboard */,
 				2870FC4729FAB850005672F0 /* Preview Content */,
+				2837CD582A0169A800C593D9 /* data.json */,
 			);
 			path = "LaunchDarkly Mobile Demo";
 			sourceTree = "<group>";
@@ -70,8 +109,6 @@
 		2870FC4729FAB850005672F0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				2870FC4329FAB84E005672F0 /* InventoryView.swift */,
-				2870FC6629FAEE4E005672F0 /* ProductView.swift */,
 				2870FC4829FAB850005672F0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -80,9 +117,20 @@
 		2870FC4F29FABCDC005672F0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2870FC822A0019F1005672F0 /* FeatureFlagViewModel.swift */,
+				2870FC842A001A64005672F0 /* ProductViewModel.swift */,
 				2870FC6829FAF052005672F0 /* Inventory.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2870FC6A29FC1548005672F0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2870FC6F29FC16A5005672F0 /* SMeltery - Audimat 3000 Regulier.otf */,
+				2870FC7629FC4581005672F0 /* Söhne-Buch.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,7 +151,6 @@
 			name = "LaunchDarkly Mobile Demo";
 			packageProductDependencies = (
 				2870FC5329FABE42005672F0 /* LaunchDarkly */,
-				2870FC5E29FACA4D005672F0 /* Stripe */,
 			);
 			productName = "LaunchDarkly Mobile Demo";
 			productReference = 2870FC3E29FAB84E005672F0 /* LaunchDarkly Mobile Demo.app */;
@@ -135,7 +182,6 @@
 			mainGroup = 2870FC3529FAB84E005672F0;
 			packageReferences = (
 				2870FC5229FABE42005672F0 /* XCRemoteSwiftPackageReference "ios-client-sdk" */,
-				2870FC5D29FACA4D005672F0 /* XCRemoteSwiftPackageReference "stripe-ios" */,
 			);
 			productRefGroup = 2870FC3F29FAB84E005672F0 /* Products */;
 			projectDirPath = "";
@@ -151,7 +197,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2870FC7B29FC89DE005672F0 /* Launch Screen.storyboard in Resources */,
+				2837CD592A0169A800C593D9 /* data.json in Resources */,
+				2870FC7029FC16A5005672F0 /* SMeltery - Audimat 3000 Regulier.otf in Resources */,
 				2870FC4929FAB850005672F0 /* Preview Assets.xcassets in Resources */,
+				2870FC7529FC44AB005672F0 /* LaunchDarkly-Mobile-Demo-Info.plist in Resources */,
+				2870FC7729FC4581005672F0 /* Söhne-Buch.otf in Resources */,
 				2870FC4629FAB850005672F0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,10 +214,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2870FC7D2A00188B005672F0 /* SwipeableProductList.swift in Sources */,
+				2870FC7F2A0018EE005672F0 /* AppHeaderView.swift in Sources */,
+				2870FC852A001A64005672F0 /* ProductViewModel.swift in Sources */,
 				2870FC6929FAF052005672F0 /* Inventory.swift in Sources */,
 				2870FC4429FAB84E005672F0 /* InventoryView.swift in Sources */,
+				2870FC872A001B97005672F0 /* SceneDelegate.swift in Sources */,
+				2870FC8B2A002086005672F0 /* OldProductListView.swift in Sources */,
+				2870FC812A0019A3005672F0 /* CommonStyles.swift in Sources */,
+				2870FC832A0019F1005672F0 /* FeatureFlagViewModel.swift in Sources */,
 				2870FC6729FAEE4E005672F0 /* ProductView.swift in Sources */,
+				284880E32A00646D005E579F /* LoginView.swift in Sources */,
 				2870FC4229FAB84E005672F0 /* LaunchDarkly_Mobile_DemoApp.swift in Sources */,
+				2870FC892A001D6F005672F0 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -277,6 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -292,14 +354,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LaunchDarkly Mobile Demo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "LaunchDarkly-Mobile-Demo-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LaunchDarkly Mobile";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -307,6 +372,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "letsgobuild.dev.LaunchDarkly-Mobile-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -320,14 +386,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LaunchDarkly Mobile Demo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "LaunchDarkly-Mobile-Demo-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LaunchDarkly Mobile";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -335,6 +404,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "letsgobuild.dev.LaunchDarkly-Mobile-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -375,14 +445,6 @@
 				minimumVersion = 8.0.0;
 			};
 		};
-		2870FC5D29FACA4D005672F0 /* XCRemoteSwiftPackageReference "stripe-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/stripe/stripe-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 23.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -390,11 +452,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2870FC5229FABE42005672F0 /* XCRemoteSwiftPackageReference "ios-client-sdk" */;
 			productName = LaunchDarkly;
-		};
-		2870FC5E29FACA4D005672F0 /* Stripe */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2870FC5D29FACA4D005672F0 /* XCRemoteSwiftPackageReference "stripe-ios" */;
-			productName = Stripe;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

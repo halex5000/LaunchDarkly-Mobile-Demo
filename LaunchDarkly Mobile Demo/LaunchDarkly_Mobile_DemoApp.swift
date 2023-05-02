@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct LaunchDarkly_Mobile_DemoApp: App {
+    var featureFlagViewModel: FeatureFlagViewModel!
+    var productViewModel: ProductViewModel!
+    var commonStyles: CommonStyles!
+    
+    init() {
+        featureFlagViewModel = FeatureFlagViewModel()
+        commonStyles = CommonStyles()
+        productViewModel = ProductViewModel(featureFlagViewModel: featureFlagViewModel)
+    }
+    
     var body: some Scene {
         WindowGroup {
             InventoryView()
+                .environmentObject(commonStyles)
+                .environmentObject(featureFlagViewModel)
+                .environmentObject(productViewModel)
         }
     }
 }
