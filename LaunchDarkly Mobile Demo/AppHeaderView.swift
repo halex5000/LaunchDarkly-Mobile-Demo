@@ -30,7 +30,6 @@ struct AppHeaderView: View {
                 Image("high-five").resizable().aspectRatio(contentMode: .fit).frame(width: 150, height: 150)
                 
             }
-            Text("Welcome back " + featureFlagViewModel.loggedInUser)
         }
     }
 }

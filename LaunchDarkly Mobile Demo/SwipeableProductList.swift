@@ -21,7 +21,6 @@ struct SwipeableProductList: View {
                 }
             }
         }
-        .padding()
         .shadow(color: title == "Featured" ? Color(red: 163/255, green: 79/255, blue: 222/255) : Color.gray.opacity(0.4), radius: 10, x: 0, y: 2)
     }
 }

@@ -21,18 +21,25 @@ class ProductViewModel: ObservableObject {
         self.featureFlagViewModel = featureFlagViewModel
         loadData()
 
-        LDClient.get()!.observe(keys: ["is"], owner: self, handler: { [self] changedFlags in
-            if changedFlags["featured-product-label"] != nil {
-                loadData()
-            }
-        })
-
-
-        LDClient.get()!.observe(keys: ["is"], owner: self, handler: { [self] changedFlags in
-            if changedFlags["new-product-experience-access"] != nil {
-                loadData()
-            }
-        })
+//        LDClient.get()!.observe(keys: ["is"], owner: self, handler: { [self] changedFlags in
+//            if changedFlags["featured-product-label"] != nil {
+//                loadData()
+//            }
+//        })
+//
+//
+//        LDClient.get()!.observe(keys: ["is"], owner: self, handler: { [self] changedFlags in
+//            if changedFlags["new-product-experience-access"] != nil {
+//                loadData()
+//            }
+//        })
+//
+//
+//        LDClient.get()!.observe(keys: ["is"], owner: self, handler: { [self] changedFlags in
+//            if changedFlags["new-product-experience-access"] != nil {
+//                loadData()
+//            }
+//        })
     }
 
     func loadData() {
@@ -47,23 +54,18 @@ class ProductViewModel: ObservableObject {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let decoder = JSONDecoder()
                 var products = try decoder.decode([Product].self, from: data)
-                products = products.shuffled()
 
                 self.allProducts = products
                 print("total product count: " + String(self.allProducts.count))
 
-                if self.featureFlagViewModel.isFeaturedEnabled {
-                    self.featured = Array(products.prefix(Int(Double(products.count) * 0.25)))
-                    print("featured product count: " + String(self.featured.count))
-                }
+                self.featured = Array(products.prefix(Int(Double(products.count) * 0.25)))
+                print("featured product count: " + String(self.featured.count))
 
-                self.toggles = products.shuffled().filter { $0.category == "toggle" }
+                self.toggles = products.filter { $0.category == "toggle" }
                 print("toggle product count: " + String(self.toggles.count))
 
-                if self.featureFlagViewModel.isGogglesEnabled {
-                    self.goggles = products.shuffled().filter { $0.category == "goggle" }
-                    print("goggle product count: " + String(self.goggles.count))
-                }
+                self.goggles = products.filter { $0.category == "goggle" }
+                print("goggle product count: " + String(self.goggles.count))
             } catch {
                 print(error)
             }

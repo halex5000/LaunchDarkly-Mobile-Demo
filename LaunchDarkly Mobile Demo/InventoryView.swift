@@ -12,7 +12,6 @@ struct NewLoginView: View {
             Picker(selection: $selectedUser, label: Text("Select a login option")) {
                 Text("Anonymous").tag("Anonymous")
                 Text("Dev tester").tag("Dev Tester")
-                Text("Cody").tag("Cody")
             }
             .pickerStyle(WheelPickerStyle())
             
@@ -25,14 +24,10 @@ struct NewLoginView: View {
                        case "Dev Tester":
                            // Perform login for dev tester
                            featureFlagViewModel.loginDevTester()
-                       case "Cody":
-                           // Perform login for cody
-                           featureFlagViewModel.loginBasicUser()
                        default:
                            print("selected user is: " + selectedUser)
                            break
                    }
-                   
                    // Dismiss the view after login is complete
                    presentationMode.wrappedValue.dismiss()
                    isPresented = false
@@ -53,23 +48,11 @@ struct InventoryView: View {
     @EnvironmentObject var featureFlagViewModel: FeatureFlagViewModel
     @State private var isShowingLoginView = false
     
+    @State private var isLoggedIn = false
+    
     var body: some View {
         ZStack {
             VStack {
-                VStack {
-                    HStack {
-                        Button("Login", action: {
-                            isShowingLoginView = true
-                        })
-                        .padding(.horizontal)
-                        .background(Color(cgColor: UIColor(red: 0.251, green: 0.357, blue: 1, alpha: 1).cgColor))
-                        .foregroundColor(Color.white)
-                        .cornerRadius(5)
-                        .shadow(radius: 5)
-                        .buttonStyle(DefaultButtonStyle())
-                        Text("Logged in as: " + featureFlagViewModel.loggedInUser).padding(.horizontal)
-                    }
-                }
                 if featureFlagViewModel.isNewStoreExperience {
                     if productViewModel.isLoading {
                         VStack {
@@ -84,7 +67,7 @@ struct InventoryView: View {
                             if featureFlagViewModel.isFeaturedEnabled {
                                 ScrollView {
                                     if productViewModel.featured.count > 0 {
-                                        SwipeableProductList(products: productViewModel.featured, title: "Featured")
+                                        SwipeableProductList(products: productViewModel.featured, title: featureFlagViewModel.featuredProductSectionTitle.uppercased())
                                     }
                                     
                                     if featureFlagViewModel.isGogglesEnabled && productViewModel.goggles.count > 0 {
@@ -97,7 +80,6 @@ struct InventoryView: View {
                                 }
                             } else {
                                 ScrollView {
-                                    
                                     if featureFlagViewModel.isGogglesEnabled && productViewModel.goggles.count > 0 {
                                         SwipeableProductList(products: productViewModel.goggles, title: "Goggles")
                                     }
@@ -107,8 +89,27 @@ struct InventoryView: View {
                                     }
                                 }
                             }
+                            HStack {
+                                Button(isLoggedIn ? "Logout" : "Login as Tester" , action: {
+                                    if isLoggedIn {
+                                        featureFlagViewModel.logout()
+                                        isLoggedIn = false
+                                    } else {
+                                        featureFlagViewModel.loginDevTester()
+                                        isLoggedIn = true
+                                    }
+                                })
+                                .padding(.horizontal)
+                                .background(Color(cgColor: UIColor(red: 0.251, green: 0.357, blue: 1, alpha: 1).cgColor))
+                                .foregroundColor(Color.white)
+                                .cornerRadius(5)
+                                .shadow(radius: 5)
+                                .buttonStyle(DefaultButtonStyle())
+                            }
                         }
-                    }}
+                    }
+                    
+                }
                 else {
                     VStack {
                         OldProductListView()

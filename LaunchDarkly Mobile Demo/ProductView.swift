@@ -60,7 +60,7 @@ struct ProductView: View {
                     ToastView(message: "Added!", isPresented: $showToast)
                 }
                 
-                if featureFlagViewModel.isNewStoreExperience {
+                if featureFlagViewModel.isPaymentEnabled {
                     Button("Add to Cart", action: addToCart)
                         .padding()
                         .background(Color(cgColor: UIColor(red: 0.251, green: 0.357, blue: 1, alpha: 1).cgColor))
@@ -77,11 +77,11 @@ struct ProductView: View {
         }
         .background(Color.white)
         .cornerRadius(10)
-        .frame( maxWidth: 225, maxHeight: 225)
+        .frame( maxWidth: 200, maxHeight: 200)
     }
     
     func addToCart() {
-        if !featureFlagViewModel.isPaymentEnabled {
+        if !featureFlagViewModel.isPaymentServiceEnabled {
             showAlert = true
         } else {
             self.showToast = true

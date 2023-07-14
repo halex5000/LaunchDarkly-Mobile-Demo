@@ -11,9 +11,11 @@ import LaunchDarkly
 class FeatureFlagViewModel: ObservableObject {
     @Published var isNewStoreExperience = false
     @Published var isPaymentEnabled = false
+    @Published var isPaymentServiceEnabled = false
     @Published var isGogglesEnabled = false
     @Published var isTogglesEnabled = false
     @Published var isFeaturedEnabled = false
+    @Published var featuredProductSectionTitle = ""
     @Published var isLoggedIn = false
     
     @Published var loggedInUser = "anonymous"
@@ -31,16 +33,12 @@ class FeatureFlagViewModel: ObservableObject {
         loggedInUser = "Alex - Dev Tester"
     }
     
-    func loginBasicUser() {
-        login(username: "literally-anyone-but-alex")
-        loggedInUser = "Cody"
-    }
-    
     func login(username: String) {
         isLoggedIn = true
         do {
             var builder = LDContextBuilder()
-            builder.trySetValue("username", LDValue(stringLiteral: username))
+//            builder.key("5316ce55-06af-4be1-a0c2-f4f8cb78943e")
+            builder.name(username)
             builder.trySetValue("device", "iPhone")
             builder.trySetValue("version", "2.0")
             let newContext = try builder.build().get()
@@ -59,6 +57,7 @@ class FeatureFlagViewModel: ObservableObject {
             print("logging out")
             var builder = LDContextBuilder()
             builder.anonymous(true)
+            builder.key(UUID().uuidString)
             builder.trySetValue("device", "iPhone")
             builder.trySetValue("version", "2.0")
             let newContext = try builder.build().get()
@@ -87,8 +86,10 @@ class FeatureFlagViewModel: ObservableObject {
         }
         
         isNewStoreExperience = LDClient.get()!.boolVariation(forKey: isStoreEnabledKey, defaultValue: false)
-        isPaymentEnabled = LDClient.get()!.boolVariation(forKey: isStripeEnabled, defaultValue: false)
+        isPaymentEnabled = LDClient.get()!.boolVariation(forKey: isNewBillingUI, defaultValue: false)
+        isPaymentServiceEnabled = LDClient.get()!.boolVariation(forKey: isStripeEnabled, defaultValue: false)
         print("is payment enabled?:" + String(isPaymentEnabled))
+        print("is payment service enabled?:" + String(isPaymentServiceEnabled))
         
         isGogglesEnabled = LDClient.get()!.stringVariation(forKey: productExperience, defaultValue: "toggle").contains("goggle")
         isTogglesEnabled = LDClient.get()!.stringVariation(forKey: productExperience, defaultValue: "toggle").contains("toggle")
@@ -97,18 +98,39 @@ class FeatureFlagViewModel: ObservableObject {
         print("is toggles enabled: " + String(isTogglesEnabled))
         
         isFeaturedEnabled = !LDClient.get()!.stringVariation(forKey: featuredProductLabel, defaultValue: "").isEmpty
+        featuredProductSectionTitle = LDClient.get()!.stringVariation(forKey: featuredProductLabel, defaultValue: "")
         
         print("is featured enabled?: " + String(isFeaturedEnabled))
         print("featured product label: " + LDClient.get()!.stringVariation(forKey: featuredProductLabel, defaultValue: "None"))
         
-        LDClient.get()!.observe(keys: [isStoreEnabledKey, isStripeEnabled, productExperience, featuredProductLabel], owner: self, handler: { [self] changedFlags in
+        LDClient.get()!.observe(keys: [isStoreEnabledKey, isNewBillingUI, isStripeEnabled, productExperience, featuredProductLabel], owner: self, handler: { [self] changedFlags in
+                
+            print("*******")
+            print("*******")
+            print("*******")
+            print(changedFlags)
+            print("*******")
+            print("*******")
+            print("*******")
+                
             if changedFlags[isStoreEnabledKey] != nil {
-                isNewStoreExperience = LDClient.get()!.boolVariation(forKey: isStoreEnabledKey, defaultValue: false)
+                let detail = LDClient.get()!.boolVariationDetail(forKey: isStoreEnabledKey, defaultValue: false)
+                print(detail.reason?.first?.value)
+                isNewStoreExperience = detail.value
+                print("is new store experience changed to: " + String(isPaymentServiceEnabled))
             }
             
             if changedFlags[isStripeEnabled] != nil {
-                isPaymentEnabled = LDClient.get()!.boolVariation(forKey: isStripeEnabled, defaultValue: false)
-                
+                let detail = LDClient.get()!.boolVariationDetail(forKey: isStripeEnabled, defaultValue: false)
+                print(detail.reason?.first?.value)
+                isPaymentServiceEnabled = detail.value
+                print("is payment enabled changed to: " + String(isPaymentServiceEnabled))
+            }
+            
+            if changedFlags[isNewBillingUI] != nil {
+                let detail = LDClient.get()!.boolVariationDetail(forKey: isNewBillingUI, defaultValue: false)
+                print(detail.reason?.first?.value)
+                isPaymentEnabled = detail.value
                 print("is payment enabled changed to: " + String(isPaymentEnabled))
             }
             
@@ -122,6 +144,7 @@ class FeatureFlagViewModel: ObservableObject {
             if changedFlags[featuredProductLabel] != nil {
                 print("featured flag changed to: " + LDClient.get()!.stringVariation(forKey: featuredProductLabel, defaultValue: ""))
                 isFeaturedEnabled = !LDClient.get()!.stringVariation(forKey: featuredProductLabel, defaultValue: "").isEmpty
+                featuredProductSectionTitle = LDClient.get()!.stringVariation(forKey: featuredProductLabel, defaultValue: "")
             }
         })
     }
